@@ -1,0 +1,18 @@
+{%extends 'base.html' %}
+{% block content %}
+
+  </style>
+   <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+   	{% if  user.is_authenticated %}
+        	<a class='nav-items nav-link' href="{% url 'logout' %}">logout</a>
+        	 {% else %}
+        	 <a class='nav-items nav-link' href="{% url 'login' %}">login</a>
+        	 <a class='nav-items nav-link' href="{% url 'register' %}">register</a>
+             {% endif %}
+  <!-- Navbar content -->
+</nav>
+        	
+
+
+    
+{% endblock content %}
